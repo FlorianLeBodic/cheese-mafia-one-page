@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: url(img/bg-heesemafia.jpg);
+    background-size: cover;
+}
+
+.header {
+    background-color: #523D30;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: rgb(6, 6, 6) 0px 5px 24px 0px;
+}
+
+.header_navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #523D30;
+}
+
+.header_title {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.header_title a {
+    color: white;
+}
+
+.header_nav_menu_link a {
+    margin: 0 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+    position: relative;
+}
+
+.header_nav_menu_link a::after {
+    content: "";
+    height: 3px;
+    background-color: white;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    transition: .2s all ease-in-out;
+}
+
+.header_nav_menu_link a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header_nav_menu_link {
+    margin-bottom: 20px;
+}
+
+.header_nav_menu_link a {
+    color: white;
+}
+
+.header_burger svg {
+    stroke: white;
+    width: 45px;
+    height: 45px;
+}
+
+@media only screen and (min-width: 1380px) {
+    .header {
+        background-color: #d75301;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+    }
+
+    .header_navbar {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header_nav_menu {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .header_nav_menu_link:last-of-type {
+        margin-right: initial;
+    }
+
+    .header_burger {
+        display: none;
+    }
+}
