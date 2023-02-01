@@ -10,17 +10,24 @@
 </head>
 
 <body>
+    <div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
     <header class="header">
         <div class="header_title">
             <a href="#">CHEESE MAFIA</a>
         </div>
         <nav class="header_navbar">
+            <div class="header_navbar_close" onclick="closeMenuMobile()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
             <ul class="header_nav_menu">
                 <li class="header_nav_menu_link">
                     <a href="#">Le pitch</a>
                 </li>
                 <li class="header_nav_menu_link">
-                    <a href="#">Les règles</a>
+                    <a href="rules">Les règles</a>
                 </li>
                 <li class="header_nav_menu_link">
                     <a href="#">Les auteurs</a>
@@ -28,24 +35,60 @@
                 <li class="header_nav_menu_link">
                     <a href="#">Les dates</a>
                 </li>
-                <li class="header_nav_menu_link">
-                    <a href="#">Contact</a>
-                </li>
             </ul>
             </div>
         </nav>
 
         <!-- image prise sur heroicons -->
-        <div class="header_burger">
+        <div class="header_burger" onclick="openMenuMobile()">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
             </svg>
-
         </div>
     </header>
+    <main class="container">
+        <article class="test">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, error. Laboriosam quo ab placeat
+                molestias
+                quaerat asperiores perspiciatis, libero mollitia natus quos esse magni nisi debitis cum ad vero
+                delectus?
+            </p>
+        </article>
+
+        <article id="rules">
+            <p>1) Distribuer à chaque joueur une carte aide de de jeu. Rangez les cartes aide de jeu supplémentaires
+                dans la boîte.
+
+                2 )On mélange le paquet de cartes Cheese Mafia puis chaque joueur tire une carte. Celui avec le plus
+                grand nombre prend la figurine 1er joueur et commence En cas d’égalité, on retire une nouvelle carte. La
+                carte « femme fatale » vaut 7 dans ce cas précis.
+            </p>
+        </article>
+
+        <article id="ruless">
+            <p>1) Distribuer à chaque joueur une carte aide de de jeu. Rangez les cartes aide de jeu supplémentaires
+                dans la boîte.
+
+                2 )On mélange le paquet de cartes Cheese Mafia puis chaque joueur tire une carte. Celui avec le plus
+                grand nombre prend la figurine 1er joueur et commence En cas d’égalité, on retire une nouvelle carte. La
+                carte « femme fatale » vaut 7 dans ce cas précis.
+            </p>
+        </article>
+
+    </main>
 </body>
-<script type="text/javascript" src="script.js"></script>
+<script>
+    function openMenuMobile() {
+        document.querySelector(".header_navbar").classList.add("open");
+        document.querySelector(".overlay-menu-mobile").classList.add("open");
+    }
+
+    function closeMenuMobile() {
+        document.querySelector(".header_navbar").classList.remove("open");
+        document.querySelector(".overlay-menu-mobile").classList.remove("open");
+    }
+</script>
 
 </html>
